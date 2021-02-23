@@ -3809,7 +3809,7 @@ tbody.collapse.in {
 }
 
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-text {
-    color: #000000
+    color: #500000
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
@@ -3853,7 +3853,7 @@ tbody.collapse.in {
     }
 
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-        color: #000000
+        color: #500000
     }
 
     .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
