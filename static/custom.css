@@ -1296,10 +1296,15 @@ div, section, article, main, aside, header, footer {
 }
 
 /* Typography improvements */
+/* Star Wars Typography - All Headings */
 h1, h2, h3, h4 {
-    color: #2c3e50 !important;
-    font-weight: 600 !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+    color: var(--starwars-gold) !important;
+    font-family: 'Orbitron', monospace !important;
+    font-weight: 700 !important;
+    text-shadow: 
+        0 0 10px var(--starwars-gold),
+        0 0 20px var(--starwars-gold),
+        0 0 30px var(--starwars-gold) !important;
 }
 
 /* Remove conflicting section header rules */
