@@ -184,6 +184,22 @@ body::before {
     }
 }
 
+/* Restore Star Wars background for desktop */
+@media (min-width: 769px) {
+    body::before {
+        display: block !important;
+    }
+    
+    body::after {
+        display: block !important;
+    }
+    
+    .navbar {
+        position: relative !important;
+        background: transparent !important;
+    }
+}
+
 /* Star Wars Decorative Elements */
 body::after {
     content: '';
@@ -692,10 +708,10 @@ div, section, article, main, aside, header, footer {
         display: none !important;
     }
     
-    /* Completely hide background patterns in top area */
-    body::before,
-    body::after {
-        display: none !important;
+    /* Hide background patterns only in navigation area */
+    body::before {
+        top: 80px !important;
+        height: calc(100% - 80px) !important;
     }
     
     .navbar-nav {
