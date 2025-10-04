@@ -988,21 +988,25 @@ div, section, article, main, aside, header, footer {
         padding-top: 100px !important;
     }
     
+    /* Home page - Center content */
     .hero-full-wrapper {
         display: flex !important;
         align-items: center !important;
-        justify-content: space-between !important;
+        justify-content: center !important;
         min-height: 80vh !important;
         position: relative !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
     }
     
     .text-content {
-        flex: 1 !important;
-        max-width: 60% !important;
+        flex: 0 0 auto !important;
+        max-width: 50% !important;
         z-index: 3 !important;
         display: block !important;
         vertical-align: initial !important;
-        margin-right: 20px !important;
+        margin-right: 40px !important;
+        text-align: left !important;
     }
     
     .starwars-droids {
@@ -1012,6 +1016,12 @@ div, section, article, main, aside, header, footer {
         top: auto !important;
         transform: none !important;
         z-index: 2 !important;
+    }
+    
+    /* Other sections - Add spacing between navigation line and header box */
+    .section-container-spacer {
+        margin-top: 40px !important;
+        padding-top: 20px !important;
     }
 }
 
@@ -1094,6 +1104,25 @@ div, section, article, main, aside, header, footer {
     margin-bottom: 30px !important;
     text-align: center !important;
     animation: starwars-title-glow 3s ease-in-out infinite alternate !important;
+}
+
+/* Section Container Spacing */
+.section-container {
+    margin-top: 40px !important;
+    padding-top: 20px !important;
+}
+
+/* Desktop specific section spacing */
+@media (min-width: 769px) {
+    .section-container {
+        margin-top: 60px !important;
+        padding-top: 30px !important;
+    }
+    
+    .section-container-spacer {
+        margin-top: 60px !important;
+        padding-top: 30px !important;
+    }
 }
 
 @keyframes starwars-title-glow {
