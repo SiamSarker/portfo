@@ -154,6 +154,14 @@ body::before {
     z-index: -1;
 }
 
+/* Hide background pattern in navigation area on mobile */
+@media (max-width: 768px) {
+    body::before {
+        top: 80px !important;
+        height: calc(100% - 80px) !important;
+    }
+}
+
 /* Star Wars Decorative Elements */
 body::after {
     content: '';
@@ -647,6 +655,17 @@ div, section, article, main, aside, header, footer {
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
+    /* Hide Star Wars background pattern in navigation area */
+    .navbar {
+        background: linear-gradient(135deg, var(--starwars-dark) 0%, var(--starwars-gray) 100%) !important;
+        position: relative !important;
+        z-index: 1000 !important;
+    }
+    
+    .navbar::before {
+        display: none !important;
+    }
+    
     .navbar-nav {
         flex-direction: column !important;
         gap: 2px !important;
