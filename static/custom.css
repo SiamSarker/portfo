@@ -282,30 +282,182 @@
     margin-top: 10px;
 }
 
-/* Fix project images - remove grayscale and set consistent size */
+/* Fix project images - apply subtle aesthetic treatment */
 .black-image-project-hover img,
 .card-container img {
     width: 100% !important;
     height: 200px !important;
     object-fit: cover !important;
-    filter: none !important;
-    -webkit-filter: none !important;
-    transition: transform 0.3s ease !important;
+    filter: brightness(0.9) contrast(1.1) saturate(0.7) !important;
+    -webkit-filter: brightness(0.9) contrast(1.1) saturate(0.7) !important;
+    transition: all 0.3s ease !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
 }
 
 .black-image-project-hover:hover img {
-    transform: scale(1.05) !important;
-    filter: none !important;
-    -webkit-filter: none !important;
+    transform: scale(1.02) !important;
+    filter: brightness(1.0) contrast(1.2) saturate(0.8) !important;
+    -webkit-filter: brightness(1.0) contrast(1.2) saturate(0.8) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
 /* Remove any grayscale filters from project images */
 .projects-carousel img {
-    filter: none !important;
-    -webkit-filter: none !important;
-    -moz-filter: none !important;
-    -ms-filter: none !important;
-    -o-filter: none !important;
+    filter: brightness(0.9) contrast(1.1) saturate(0.7) !important;
+    -webkit-filter: brightness(0.9) contrast(1.1) saturate(0.7) !important;
+    -moz-filter: brightness(0.9) contrast(1.1) saturate(0.7) !important;
+    -ms-filter: brightness(0.9) contrast(1.1) saturate(0.7) !important;
+    -o-filter: brightness(0.9) contrast(1.1) saturate(0.7) !important;
+}
+
+/* Keep skill tags vibrant and colorful */
+.tech-tag,
+.skill-tag,
+.concept-tag {
+    background-color: #007bff !important;
+    color: white !important;
+    padding: 6px 15px !important;
+    border-radius: 20px !important;
+    font-size: 13px !important;
+    margin: 3px !important;
+    font-weight: 500 !important;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.tech-tag:hover,
+.skill-tag:hover,
+.concept-tag:hover {
+    background-color: #0056b3 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4) !important;
+}
+
+/* Enhanced aesthetic improvements */
+.section-container {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important;
+    margin: 20px 0 !important;
+    padding: 40px !important;
+}
+
+.card-container,
+.card-container-lg {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(0, 123, 255, 0.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+.card-container:hover,
+.card-container-lg:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+    border-color: rgba(0, 123, 255, 0.2) !important;
+}
+
+/* Experience and Education items aesthetic */
+.experience-item,
+.education-item {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-left: 4px solid #007bff !important;
+    border-radius: 0 12px 12px 0 !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+.education-item {
+    border-left-color: #28a745 !important;
+}
+
+/* Skills page aesthetic */
+.skill-category {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(0, 123, 255, 0.1) !important;
+}
+
+.skill-item {
+    background: rgba(248, 249, 250, 0.5) !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease !important;
+}
+
+.skill-item:hover {
+    background: rgba(0, 123, 255, 0.05) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Button styling improvements */
+.btn {
+    border-radius: 25px !important;
+    padding: 10px 25px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+    border: none !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0056b3 0%, #004085 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.3) !important;
+}
+
+.btn-default {
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.btn-default:hover {
+    background: linear-gradient(135deg, #495057 0%, #343a40 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(108, 117, 125, 0.3) !important;
+}
+
+/* Typography improvements */
+h1, h2, h3, h4 {
+    color: #2c3e50 !important;
+    font-weight: 600 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.section-container-spacer h1 {
+    background: linear-gradient(135deg, #007bff 0%, #28a745 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    font-size: 2.5rem !important;
+    margin-bottom: 15px !important;
+}
+
+.section-container-spacer p {
+    color: #6c757d !important;
+    font-size: 1.1rem !important;
+    font-weight: 300 !important;
+}
+
+/* Navigation aesthetic improvements */
+.navbar-nav li a p {
+    color: #2c3e50 !important;
+    font-weight: 500 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+.navbar-nav li a:hover p {
+    color: #007bff !important;
+    transform: translateY(-1px) !important;
 }
 
 /* Responsive improvements */
