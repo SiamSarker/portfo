@@ -337,7 +337,7 @@ li {
     overflow: hidden !important;
 }
 
-/* Eliminate all white backgrounds */
+/* Eliminate all white backgrounds - Force override */
 .white-text-container {
     background: linear-gradient(135deg, var(--starwars-dark) 0%, var(--starwars-gray) 100%) !important;
 }
@@ -358,6 +358,130 @@ li {
 
 .col-xs-12, .col-sm-6, .col-sm-4, .col-md-6, .col-md-4 {
     background: transparent !important;
+}
+
+/* Force dark backgrounds for all page sections */
+body > div {
+    background: linear-gradient(135deg, var(--starwars-dark) 0%, var(--starwars-gray) 50%, var(--starwars-dark) 100%) !important;
+}
+
+/* Override main CSS file styles */
+.section-container-spacer {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(44, 44, 44, 0.95) 100%) !important;
+    border: 1px solid var(--starwars-gold) !important;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2) !important;
+    padding: 40px !important;
+    margin: 20px !important;
+}
+
+/* Force dark backgrounds for all content areas */
+.section-container-spacer .container {
+    background: transparent !important;
+}
+
+.section-container-spacer .row {
+    background: transparent !important;
+}
+
+.section-container-spacer .col-xs-12,
+.section-container-spacer .col-sm-6,
+.section-container-spacer .col-sm-4,
+.section-container-spacer .col-md-6,
+.section-container-spacer .col-md-4 {
+    background: transparent !important;
+}
+
+/* About page specific fixes */
+.about-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(44, 44, 44, 0.95) 100%) !important;
+}
+
+.about-content {
+    background: transparent !important;
+}
+
+.about-text {
+    background: transparent !important;
+}
+
+.about-image {
+    background: transparent !important;
+}
+
+/* Experience page specific fixes */
+.experience-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(44, 44, 44, 0.95) 100%) !important;
+}
+
+/* Projects page specific fixes */
+.projects-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(44, 44, 44, 0.95) 100%) !important;
+}
+
+/* Skills page specific fixes */
+.skills-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(44, 44, 44, 0.95) 100%) !important;
+}
+
+/* Education page specific fixes */
+.education-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(44, 44, 44, 0.95) 100%) !important;
+}
+
+/* Contact page specific fixes */
+.contact-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(44, 44, 44, 0.95) 100%) !important;
+}
+
+/* Force all main content areas to be dark */
+main, .main-content, .content-area, .page-content {
+    background: linear-gradient(135deg, var(--starwars-dark) 0%, var(--starwars-gray) 50%, var(--starwars-dark) 100%) !important;
+}
+
+/* Override any remaining white backgrounds */
+* {
+    background-color: transparent !important;
+}
+
+body, html {
+    background: linear-gradient(135deg, var(--starwars-dark) 0%, var(--starwars-gray) 50%, var(--starwars-dark) 100%) !important;
+}
+
+/* Nuclear option - Force all elements to be dark */
+div, section, article, main, aside, header, footer {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* Specific overrides for common white background classes */
+.white-text-container,
+.section-container-spacer,
+.section-container,
+.container,
+.row,
+.col-xs-12,
+.col-sm-6,
+.col-sm-4,
+.col-md-6,
+.col-md-4,
+.col-lg-6,
+.col-lg-4,
+.col-xl-6,
+.col-xl-4 {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(44, 44, 44, 0.95) 100%) !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* Force override for any remaining white backgrounds */
+*[style*="background-color: white"],
+*[style*="background-color: #fff"],
+*[style*="background-color: #ffffff"],
+*[style*="background: white"],
+*[style*="background: #fff"],
+*[style*="background: #ffffff"] {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(44, 44, 44, 0.95) 100%) !important;
+    background-color: transparent !important;
 }
 
 .card-container::before {
