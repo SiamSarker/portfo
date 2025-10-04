@@ -1206,14 +1206,14 @@ div, section, article, main, aside, header, footer {
 .tech-tag,
 .skill-tag,
 .concept-tag {
-    background: linear-gradient(135deg, var(--starwars-blue) 0%, var(--starwars-purple) 100%) !important;
-    color: var(--starwars-white) !important;
+    background: transparent !important;
+    color: var(--starwars-gold) !important;
     padding: 6px 15px !important;
     border-radius: 0 !important;
     font-size: 13px !important;
     margin: 3px !important;
     font-weight: 500 !important;
-    box-shadow: 0 0 15px rgba(0, 123, 255, 0.4) !important;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3) !important;
     transition: all 0.3s ease !important;
     border: 1px solid var(--starwars-gold) !important;
     font-family: 'Orbitron', monospace !important;
@@ -1222,9 +1222,9 @@ div, section, article, main, aside, header, footer {
 .tech-tag:hover,
 .skill-tag:hover,
 .concept-tag:hover {
-    background: linear-gradient(135deg, var(--starwars-purple) 0%, var(--starwars-gold) 100%) !important;
+    background: rgba(255, 215, 0, 0.1) !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6) !important;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5) !important;
     border-color: var(--starwars-gold) !important;
 }
 
