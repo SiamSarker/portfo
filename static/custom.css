@@ -940,6 +940,13 @@ div, section, article, main, aside, header, footer {
     opacity: 0.7 !important;
 }
 
+/* Override navigation borders */
+@media (min-width: 768px) {
+    .navbar-default .navbar-nav > li > a {
+        border-right: 1px solid var(--starwars-white) !important;
+    }
+}
+
 /* Responsive navigation */
 @media (max-width: 1400px) {
     .navbar-nav li a p {
