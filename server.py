@@ -41,3 +41,7 @@ def submit_form():
         except:
             return 'did not save to database'
     return 'Something went wrong. Try again!'
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
