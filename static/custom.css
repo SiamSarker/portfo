@@ -807,6 +807,12 @@ div, section, article, main, aside, header, footer {
         padding: 100px 0 40px 0 !important;
     }
     
+    /* Mobile section container spacing */
+    .section-container-spacer {
+        margin-top: 100px !important;
+        padding: 20px !important;
+    }
+
     .hero-full-wrapper {
         flex-direction: column !important;
         align-items: center !important;
