@@ -182,6 +182,8 @@ body::after {
     flex: 1;
     max-width: 60%;
     z-index: 3;
+    display: block !important;
+    vertical-align: initial !important;
 }
 
 .hero-full-container h1 {
@@ -630,6 +632,33 @@ div, section, article, main, aside, header, footer {
         padding: 80px 0 40px 0 !important;
     }
     
+    .hero-full-wrapper {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        min-height: auto !important;
+        justify-content: center !important;
+    }
+    
+    .text-content {
+        order: 1 !important;
+        margin-bottom: 30px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+        vertical-align: initial !important;
+    }
+    
+    .starwars-droids {
+        order: 2 !important;
+        position: relative !important;
+        right: auto !important;
+        top: auto !important;
+        transform: none !important;
+        margin-top: 20px !important;
+        text-align: center !important;
+    }
+    
     .hero-full-container h1 {
         font-size: 2.2rem !important;
         line-height: 1.2 !important;
@@ -647,28 +676,6 @@ div, section, article, main, aside, header, footer {
         font-size: 1rem !important;
         text-align: center !important;
         margin-top: 15px !important;
-    }
-    
-    .hero-full-wrapper {
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-    }
-    
-    .text-content {
-        order: 1 !important;
-        margin-bottom: 30px !important;
-        width: 100% !important;
-    }
-    
-    .starwars-droids {
-        order: 2 !important;
-        position: relative !important;
-        right: auto !important;
-        top: auto !important;
-        transform: none !important;
-        margin-top: 20px !important;
-        text-align: center !important;
     }
     
     .droid-image {
@@ -788,10 +795,32 @@ div, section, article, main, aside, header, footer {
     }
 }
 
-/* Responsive section container padding */
-@media (min-width: 1200px) {
-    .section-container {
-        padding: 40px 0;
+/* Desktop Layout - Ensure proper spacing */
+@media (min-width: 769px) {
+    .hero-full-wrapper {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        min-height: 80vh !important;
+        position: relative !important;
+    }
+    
+    .text-content {
+        flex: 1 !important;
+        max-width: 60% !important;
+        z-index: 3 !important;
+        display: block !important;
+        vertical-align: initial !important;
+        margin-right: 20px !important;
+    }
+    
+    .starwars-droids {
+        flex: 0 0 auto !important;
+        position: relative !important;
+        right: auto !important;
+        top: auto !important;
+        transform: none !important;
+        z-index: 2 !important;
     }
 }
 
