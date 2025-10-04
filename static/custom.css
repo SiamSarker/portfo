@@ -41,6 +41,52 @@
     gap: 8px;
 }
 
+/* Hamburger Menu Button Styling */
+.navbar-toggle {
+    display: block !important;
+    border: 1px solid var(--starwars-gold) !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    padding: 9px 10px !important;
+    margin-top: 8px !important;
+    margin-right: 15px !important;
+    float: right !important;
+}
+
+.navbar-toggle .icon-bar {
+    display: block !important;
+    width: 22px !important;
+    height: 2px !important;
+    border-radius: 0 !important;
+    background-color: var(--starwars-gold) !important;
+    box-shadow: 0 0 5px var(--starwars-gold) !important;
+    margin: 4px 0 !important;
+    transition: all 0.3s ease !important;
+}
+
+.navbar-toggle:hover {
+    background: rgba(255, 215, 0, 0.1) !important;
+    box-shadow: 0 0 10px var(--starwars-gold) !important;
+}
+
+.navbar-toggle:focus {
+    background: rgba(255, 215, 0, 0.1) !important;
+    box-shadow: 0 0 10px var(--starwars-gold) !important;
+    outline: none !important;
+}
+
+.navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px) !important;
+}
+
+.navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(2) {
+    opacity: 0 !important;
+}
+
+.navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px) !important;
+}
+
 .navbar-nav li {
     margin: 0 2px;
     flex-shrink: 0;
@@ -605,6 +651,11 @@ div, section, article, main, aside, header, footer {
         flex-direction: column !important;
         gap: 5px !important;
         padding: 15px 0 !important;
+        background: linear-gradient(135deg, var(--starwars-dark) 0%, var(--starwars-gray) 100%) !important;
+        border: 1px solid var(--starwars-gold) !important;
+        border-radius: 0 !important;
+        box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3) !important;
+        margin-top: 10px !important;
     }
     
     .navbar-nav li {
@@ -617,11 +668,30 @@ div, section, article, main, aside, header, footer {
         font-size: 12px !important;
         padding: 8px 15px !important;
         margin: 0 !important;
+        color: var(--starwars-gold) !important;
+        text-shadow: 0 0 10px var(--starwars-gold) !important;
     }
     
     .navbar-toggle {
         margin-top: 8px !important;
         margin-right: 15px !important;
+        border: 1px solid var(--starwars-gold) !important;
+        background: transparent !important;
+    }
+    
+    .navbar-toggle .icon-bar {
+        background-color: var(--starwars-gold) !important;
+        box-shadow: 0 0 5px var(--starwars-gold) !important;
+    }
+    
+    .navbar-toggle:hover {
+        background: rgba(255, 215, 0, 0.1) !important;
+        box-shadow: 0 0 10px var(--starwars-gold) !important;
+    }
+    
+    .navbar-toggle:focus {
+        background: rgba(255, 215, 0, 0.1) !important;
+        box-shadow: 0 0 10px var(--starwars-gold) !important;
     }
 }
 
@@ -797,6 +867,26 @@ div, section, article, main, aside, header, footer {
 
 /* Desktop Layout - Ensure proper spacing */
 @media (min-width: 769px) {
+    .navbar-toggle {
+        display: none !important;
+    }
+    
+    .navbar-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        gap: 8px !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        margin-top: 0 !important;
+    }
+    
     .hero-full-wrapper {
         display: flex !important;
         align-items: center !important;
