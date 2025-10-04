@@ -1,0 +1,264 @@
+/* Custom Portfolio Styles */
+
+/* Fix image sizes for consistency */
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.company-logo img,
+.university-logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* Experience page styling */
+.experience-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-left: 3px solid #007bff;
+    background-color: #f8f9fa;
+}
+
+.experience-content h3 {
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.experience-content h4 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.duration {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.exp-bullets {
+    margin-bottom: 20px;
+}
+
+.exp-bullets li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.tech-tag {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin: 2px;
+}
+
+.experience-divider {
+    border: none;
+    height: 2px;
+    background-color: #e9ecef;
+    margin: 40px 0;
+}
+
+/* Skills page styling */
+.skill-category {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.skill-category h3 {
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skill-item {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.skill-item h4 {
+    margin: 10px 0 5px 0;
+    color: #333;
+}
+
+.skill-item p {
+    color: #666;
+    font-size: 12px;
+    margin: 0;
+}
+
+.concepts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.concept-tag {
+    background-color: #28a745;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin: 3px;
+}
+
+/* Education page styling */
+.education-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-left: 3px solid #28a745;
+    background-color: #f8f9fa;
+}
+
+.education-content h3 {
+    color: #28a745;
+    margin-bottom: 5px;
+}
+
+.education-content h4 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cgpa {
+    color: #28a745;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.edu-courseworks {
+    margin-top: 20px;
+}
+
+.edu-course-title {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.edu-bullets {
+    margin-bottom: 20px;
+}
+
+.edu-bullets li {
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.education-skills {
+    margin-top: 20px;
+}
+
+.skill-tag {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin: 2px;
+}
+
+.education-divider {
+    border: none;
+    height: 2px;
+    background-color: #e9ecef;
+    margin: 40px 0;
+}
+
+.certification-item {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.certification-item h4 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Projects page improvements */
+.card-container {
+    min-height: 300px;
+}
+
+.card-container-lg {
+    min-height: 350px;
+}
+
+.card-container h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.card-container p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.card-container .btn {
+    margin-top: 10px;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .experience-item,
+    .education-item {
+        padding: 15px;
+    }
+    
+    .skill-category {
+        padding: 15px;
+    }
+    
+    .concepts-grid {
+        justify-content: flex-start;
+    }
+}
+
+/* General improvements */
+.section-container-spacer {
+    margin-bottom: 40px;
+}
+
+.section-container-spacer h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section-container-spacer p {
+    color: #666;
+    font-style: italic;
+}
+
+/* Footer improvements */
+.footer-container {
+    margin-top: 60px;
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+}
+
+.footer-container p {
+    color: #666;
+    margin: 0;
+}
