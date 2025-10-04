@@ -822,7 +822,7 @@ div, section, article, main, aside, header, footer {
     }
     
     .text-content {
-        order: 1 !important;
+        order: 2 !important;
         margin-bottom: 30px !important;
         width: 100% !important;
         max-width: 100% !important;
@@ -831,7 +831,7 @@ div, section, article, main, aside, header, footer {
     }
     
     .starwars-droids {
-        order: 2 !important;
+        order: 1 !important;
         position: relative !important;
         right: auto !important;
         top: auto !important;
@@ -841,79 +841,31 @@ div, section, article, main, aside, header, footer {
     }
     
     .hero-full-container h1 {
-        font-size: 2.2rem !important;
-        line-height: 1.2 !important;
-        margin-bottom: 15px !important;
+        font-size: 2.4rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 17px !important;
         text-align: center !important;
     }
     
     .starwars-subtitle p:first-child {
-        font-size: 1.1rem !important;
+        font-size: 1.3rem !important;
         text-align: center !important;
         margin-bottom: 10px !important;
     }
     
     .starwars-subtitle p:last-child {
-        font-size: 1rem !important;
+        font-size: 1.2rem !important;
         text-align: center !important;
         margin-top: 15px !important;
     }
     
     .droid-image {
-        width: 280px !important;
+        width: 320px !important;
         max-width: 90% !important;
         height: auto !important;
     }
 }
 
-/* Small Mobile Devices */
-@media (max-width: 576px) {
-    .hero-full-container h1 {
-        font-size: 1.8rem !important;
-        line-height: 1.3 !important;
-    }
-    
-    .starwars-subtitle p:first-child {
-        font-size: 1rem !important;
-    }
-    
-    .starwars-subtitle p:last-child {
-        font-size: 0.9rem !important;
-    }
-    
-    .droid-image {
-        width: 240px !important;
-    }
-    
-    .navbar-nav li a p {
-        font-size: 11px !important;
-        padding: 6px 12px !important;
-    }
-}
-
-/* Extra Small Devices */
-@media (max-width: 480px) {
-    .hero-full-container h1 {
-        font-size: 1.6rem !important;
-    }
-    
-    .starwars-subtitle p:first-child {
-        font-size: 0.9rem !important;
-    }
-    
-    .starwars-subtitle p:last-child {
-        font-size: 0.8rem !important;
-    }
-    
-    .droid-image {
-        width: 200px !important;
-    }
-    
-    .navbar-nav li a p {
-        font-size: 10px !important;
-        padding: 5px 10px !important;
-    }
-}
 
 /* Landscape Mobile */
 @media (max-width: 768px) and (orientation: landscape) {
