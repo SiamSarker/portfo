@@ -1,5 +1,56 @@
 /* Custom Portfolio Styles */
 
+/* Navigation fixes */
+.navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav li {
+    margin: 0 8px;
+    flex-shrink: 0;
+}
+
+.navbar-nav li a p {
+    font-size: 16px !important;
+    margin: 0;
+    padding: 5px 8px;
+    white-space: nowrap;
+}
+
+/* Responsive navigation */
+@media (max-width: 1200px) {
+    .navbar-nav li a p {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navbar-nav li {
+        margin: 2px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .navbar-nav li a p {
+        font-size: 16px !important;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav li a p {
+        font-size: 14px !important;
+    }
+}
+
 /* Fix image sizes for consistency */
 .skill-icon {
     width: 60px;
