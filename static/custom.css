@@ -1302,20 +1302,9 @@ h1, h2, h3, h4 {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
 }
 
-.section-container-spacer h1 {
-    background: linear-gradient(135deg, #007bff 0%, #28a745 100%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-    font-size: 2.5rem !important;
-    margin-bottom: 15px !important;
-}
+/* Remove conflicting section header rules */
 
-.section-container-spacer p {
-    color: #6c757d !important;
-    font-size: 1.1rem !important;
-    font-weight: 300 !important;
-}
+/* Remove conflicting section paragraph rules */
 
 /* Navigation aesthetic improvements */
 .navbar-nav li a p {
@@ -1351,15 +1340,9 @@ h1, h2, h3, h4 {
     margin-bottom: 40px;
 }
 
-.section-container-spacer h1 {
-    color: #333;
-    margin-bottom: 10px;
-}
+/* Remove conflicting section header rules */
 
-.section-container-spacer p {
-    color: #666;
-    font-style: italic;
-}
+/* Remove conflicting section paragraph rules */
 
 /* Footer improvements */
 .footer-container {
