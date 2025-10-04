@@ -588,6 +588,219 @@ div, section, article, main, aside, header, footer {
     }
 }
 
+/* Darth Vader Interactive Styling */
+.darth-vader-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 0;
+    border: 2px solid var(--starwars-red);
+    box-shadow: 
+        0 0 20px var(--starwars-red),
+        0 0 40px rgba(255, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(20, 20, 20, 0.9) 100%);
+    transition: all 0.3s ease;
+}
+
+.darth-vader-container:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 30px var(--starwars-red),
+        0 0 60px rgba(255, 0, 0, 0.5),
+        inset 0 0 30px rgba(255, 0, 0, 0.2);
+    border-color: var(--starwars-gold);
+}
+
+.darth-vader-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: 
+        brightness(0.9) 
+        contrast(1.2) 
+        saturate(1.1)
+        drop-shadow(0 0 10px var(--starwars-red));
+    transition: all 0.3s ease;
+}
+
+.darth-vader-container:hover .darth-vader-image {
+    filter: 
+        brightness(1.1) 
+        contrast(1.3) 
+        saturate(1.3)
+        drop-shadow(0 0 20px var(--starwars-red))
+        drop-shadow(0 0 30px var(--starwars-gold));
+}
+
+.darth-vader-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.force-power-indicator {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, var(--starwars-red) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: force-pulse 2s ease-in-out infinite;
+    box-shadow: 0 0 15px var(--starwars-red);
+}
+
+.breathing-effect {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--starwars-red) 20%, 
+        var(--starwars-gold) 50%, 
+        var(--starwars-red) 80%, 
+        transparent 100%);
+    border-radius: 2px;
+    animation: breathing 3s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+@keyframes force-pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 1;
+    }
+}
+
+@keyframes breathing {
+    0%, 100% {
+        opacity: 0.3;
+        transform: translateX(-50%) scaleX(0.8);
+    }
+    50% {
+        opacity: 0.9;
+        transform: translateX(-50%) scaleX(1.2);
+    }
+}
+
+/* Darth Vader Interactive Effects */
+.darth-vader-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        var(--starwars-red), 
+        var(--starwars-gold), 
+        var(--starwars-red), 
+        var(--starwars-gold));
+    border-radius: 0;
+    z-index: -1;
+    animation: border-glow 4s linear infinite;
+    opacity: 0.6;
+}
+
+.darth-vader-container::after {
+    content: '⚡';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: var(--starwars-gold);
+    text-shadow: 0 0 10px var(--starwars-gold);
+    animation: lightning 2s ease-in-out infinite;
+    z-index: 3;
+}
+
+@keyframes border-glow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes lightning {
+    0%, 90%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    5%, 85% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Responsive Darth Vader */
+@media (max-width: 768px) {
+    .darth-vader-container {
+        max-width: 300px;
+    }
+    
+    .force-power-indicator {
+        width: 15px;
+        height: 15px;
+        top: 15px;
+        right: 15px;
+    }
+    
+    .breathing-effect {
+        height: 3px;
+        bottom: 15px;
+    }
+    
+    .darth-vader-container::after {
+        font-size: 20px;
+        top: 8px;
+        left: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .darth-vader-container {
+        max-width: 250px;
+    }
+    
+    .force-power-indicator {
+        width: 12px;
+        height: 12px;
+        top: 12px;
+        right: 12px;
+    }
+    
+    .breathing-effect {
+        height: 2px;
+        bottom: 12px;
+    }
+    
+    .darth-vader-container::after {
+        font-size: 18px;
+        top: 6px;
+        left: 6px;
+    }
+}
+
 /* Responsive droids */
 @media (max-width: 1400px) {
     .droid-image {
