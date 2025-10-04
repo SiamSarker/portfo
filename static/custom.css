@@ -1258,9 +1258,11 @@ div, section, article, main, aside, header, footer {
 }
 
 .skill-item {
-    background: rgba(248, 249, 250, 0.5) !important;
-    border-radius: 12px !important;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(44, 44, 44, 0.8) 100%) !important;
+    border-radius: 0 !important;
     transition: all 0.3s ease !important;
+    border: 1px solid var(--starwars-blue) !important;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2) !important;
 }
 
 .skill-item:hover {
