@@ -3,27 +3,39 @@
 /* Navigation fixes */
 .navbar-nav {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .navbar-nav li {
-    margin: 0 8px;
-    flex-shrink: 0;
+    margin: 0 4px;
+    flex-shrink: 1;
+    min-width: 0;
 }
 
 .navbar-nav li a p {
-    font-size: 16px !important;
+    font-size: 14px !important;
     margin: 0;
-    padding: 5px 8px;
+    padding: 3px 6px;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Responsive navigation */
+@media (max-width: 1400px) {
+    .navbar-nav li a p {
+        font-size: 13px !important;
+        padding: 3px 4px;
+    }
+}
+
 @media (max-width: 1200px) {
     .navbar-nav li a p {
-        font-size: 14px !important;
+        font-size: 12px !important;
+        padding: 2px 3px;
     }
 }
 
@@ -268,6 +280,32 @@
 
 .card-container .btn {
     margin-top: 10px;
+}
+
+/* Fix project images - remove grayscale and set consistent size */
+.black-image-project-hover img,
+.card-container img {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    transition: transform 0.3s ease !important;
+}
+
+.black-image-project-hover:hover img {
+    transform: scale(1.05) !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+}
+
+/* Remove any grayscale filters from project images */
+.projects-carousel img {
+    filter: none !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    -ms-filter: none !important;
+    -o-filter: none !important;
 }
 
 /* Responsive improvements */
