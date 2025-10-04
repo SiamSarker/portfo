@@ -1251,10 +1251,10 @@ div, section, article, main, aside, header, footer {
 
 /* Skills page aesthetic */
 .skill-category {
-    background: rgba(255, 255, 255, 0.9) !important;
-    border-radius: 16px !important;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08) !important;
-    border: 1px solid rgba(0, 123, 255, 0.1) !important;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(44, 44, 44, 0.95) 100%) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3) !important;
+    border: 1px solid var(--starwars-gold) !important;
 }
 
 .skill-item {
