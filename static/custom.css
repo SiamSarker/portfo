@@ -170,6 +170,20 @@ body::after {
     z-index: 2;
 }
 
+.hero-full-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+    position: relative;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 60%;
+    z-index: 3;
+}
+
 .hero-full-container h1 {
     color: var(--starwars-gold) !important;
     font-family: 'Orbitron', monospace !important;
@@ -579,6 +593,199 @@ div, section, article, main, aside, header, footer {
 .droid-image:hover {
     transform: none;
     box-shadow: none;
+}
+
+/* Mobile Responsive Design - Homepage */
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column !important;
+        gap: 5px !important;
+        padding: 15px 0 !important;
+    }
+    
+    .navbar-nav li {
+        margin: 2px 0 !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    .navbar-nav li a p {
+        font-size: 12px !important;
+        padding: 8px 15px !important;
+        margin: 0 !important;
+    }
+    
+    .navbar-toggle {
+        margin-top: 8px !important;
+        margin-right: 15px !important;
+    }
+}
+
+/* Mobile Hero Section */
+@media (max-width: 768px) {
+    .hero-full-container {
+        min-height: 100vh !important;
+        padding: 80px 0 40px 0 !important;
+    }
+    
+    .hero-full-container h1 {
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 15px !important;
+        text-align: center !important;
+    }
+    
+    .starwars-subtitle p:first-child {
+        font-size: 1.1rem !important;
+        text-align: center !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .starwars-subtitle p:last-child {
+        font-size: 1rem !important;
+        text-align: center !important;
+        margin-top: 15px !important;
+    }
+    
+    .hero-full-wrapper {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    
+    .text-content {
+        order: 1 !important;
+        margin-bottom: 30px !important;
+        width: 100% !important;
+    }
+    
+    .starwars-droids {
+        order: 2 !important;
+        position: relative !important;
+        right: auto !important;
+        top: auto !important;
+        transform: none !important;
+        margin-top: 20px !important;
+        text-align: center !important;
+    }
+    
+    .droid-image {
+        width: 280px !important;
+        max-width: 90% !important;
+        height: auto !important;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 576px) {
+    .hero-full-container h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .starwars-subtitle p:first-child {
+        font-size: 1rem !important;
+    }
+    
+    .starwars-subtitle p:last-child {
+        font-size: 0.9rem !important;
+    }
+    
+    .droid-image {
+        width: 240px !important;
+    }
+    
+    .navbar-nav li a p {
+        font-size: 11px !important;
+        padding: 6px 12px !important;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+    .hero-full-container h1 {
+        font-size: 1.6rem !important;
+    }
+    
+    .starwars-subtitle p:first-child {
+        font-size: 0.9rem !important;
+    }
+    
+    .starwars-subtitle p:last-child {
+        font-size: 0.8rem !important;
+    }
+    
+    .droid-image {
+        width: 200px !important;
+    }
+    
+    .navbar-nav li a p {
+        font-size: 10px !important;
+        padding: 5px 10px !important;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-full-container {
+        min-height: 100vh !important;
+        padding: 60px 0 20px 0 !important;
+    }
+    
+    .hero-full-container h1 {
+        font-size: 2rem !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .starwars-subtitle p:first-child {
+        font-size: 1rem !important;
+        margin-bottom: 5px !important;
+    }
+    
+    .starwars-subtitle p:last-child {
+        font-size: 0.9rem !important;
+        margin-top: 10px !important;
+    }
+    
+    .starwars-droids {
+        margin-top: 15px !important;
+    }
+    
+    .droid-image {
+        width: 250px !important;
+    }
+}
+
+/* Tablet Portrait */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-full-container h1 {
+        font-size: 3rem !important;
+    }
+    
+    .starwars-subtitle p:first-child {
+        font-size: 1.3rem !important;
+    }
+    
+    .starwars-subtitle p:last-child {
+        font-size: 1.1rem !important;
+    }
+    
+    .droid-image {
+        width: 400px !important;
+    }
+}
+
+/* Tablet Landscape */
+@media (min-width: 1024px) and (max-width: 1366px) {
+    .hero-full-container h1 {
+        font-size: 3.5rem !important;
+    }
+    
+    .droid-image {
+        width: 450px !important;
+    }
 }
 
 /* Responsive section container padding */
