@@ -659,17 +659,14 @@ div, section, article, main, aside, header, footer {
 
 /* Star Wars Section Headers */
 .section-container-spacer h1 {
-    background: linear-gradient(135deg, var(--starwars-gold) 0%, var(--starwars-blue) 50%, var(--starwars-gold) 100%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
+    color: var(--starwars-gold) !important;
     font-family: 'Orbitron', monospace !important;
     font-weight: 900 !important;
     font-size: 3.5rem !important;
     text-shadow: 0 0 30px var(--starwars-gold) !important;
-    animation: starwars-title-glow 3s ease-in-out infinite alternate !important;
     margin-bottom: 30px !important;
     text-align: center !important;
+    animation: starwars-title-glow 3s ease-in-out infinite alternate !important;
 }
 
 @keyframes starwars-title-glow {
