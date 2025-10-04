@@ -1,12 +1,26 @@
 /* Custom Portfolio Styles */
 
-/* Navigation fixes */
+/* Navigation fixes - prevent overlap with content */
+.navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
 .navbar-nav {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     width: 100%;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
 }
 
 .navbar-nav li {
@@ -22,6 +36,11 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/* Add top margin to body content to prevent overlap */
+body {
+    margin-top: 80px !important;
 }
 
 /* Responsive navigation */
@@ -55,11 +74,21 @@
         font-size: 16px !important;
         padding: 8px 0;
     }
+    
+    /* Adjust body margin for mobile navigation */
+    body {
+        margin-top: 120px !important;
+    }
 }
 
 @media (max-width: 768px) {
     .navbar-nav li a p {
         font-size: 14px !important;
+    }
+    
+    /* Adjust body margin for smaller mobile screens */
+    body {
+        margin-top: 100px !important;
     }
 }
 
