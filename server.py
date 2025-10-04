@@ -11,6 +11,13 @@ def hello_home():
     return render_template('index.html')
 
 
+@app.route('/view_data')
+def view_data():
+    with open('database.csv', newline='') as f:
+        reader = csv.reader(f)
+        data = list(reader)
+    return '<br>'.join([', '.join(row) for row in data])
+
 @app.route('/<string:page_name>')
 def html_page(page_name):
     return render_template(page_name)
@@ -37,6 +44,7 @@ def submit_form():
         except:
             return 'did not save to database'
     return 'Something went wrong. Try again!'
+
 
 if __name__ == '__main__':
     app.run(debug=True)
