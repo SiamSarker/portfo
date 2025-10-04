@@ -552,112 +552,147 @@ div, section, article, main, aside, header, footer {
     50% { transform: translateY(-8px) rotate(10deg); opacity: 1; }
 }
 
-/* Star Wars Droids */
+/* Star Wars Droids - Real Image */
 .starwars-droids {
     position: absolute;
     right: 50px;
     top: 50%;
     transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
     z-index: 10;
 }
 
-.droid {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(44, 44, 44, 0.8) 100%);
-    border: 2px solid var(--starwars-gold);
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-    min-width: 200px;
-    box-shadow: 
-        0 0 20px rgba(255, 215, 0, 0.3),
-        inset 0 0 20px rgba(255, 215, 0, 0.1);
-    transition: all 0.3s ease;
+.droid-image-container {
     position: relative;
-    overflow: hidden;
+    display: inline-block;
 }
 
-.droid::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--starwars-gold), var(--starwars-blue), var(--starwars-gold));
-    animation: starwars-border 3s linear infinite;
-}
-
-.droid:hover {
-    transform: translateY(-5px) scale(1.05);
+.droid-image {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    border: 3px solid var(--starwars-gold);
     box-shadow: 
         0 0 30px rgba(255, 215, 0, 0.5),
         inset 0 0 30px rgba(255, 215, 0, 0.2);
+    transition: all 0.3s ease;
+    animation: starwars-droid-glow 3s ease-in-out infinite;
 }
 
-.droid-icon {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    animation: starwars-droid-bounce 2s ease-in-out infinite;
+.droid-image:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 40px rgba(255, 215, 0, 0.7),
+        inset 0 0 40px rgba(255, 215, 0, 0.3);
 }
 
-.c3po .droid-icon {
-    color: var(--starwars-gold);
-    text-shadow: 0 0 15px var(--starwars-gold);
+@keyframes starwars-droid-glow {
+    0%, 100% { 
+        box-shadow: 
+            0 0 30px rgba(255, 215, 0, 0.5),
+            inset 0 0 30px rgba(255, 215, 0, 0.2);
+    }
+    50% { 
+        box-shadow: 
+            0 0 40px rgba(255, 215, 0, 0.7),
+            inset 0 0 40px rgba(255, 215, 0, 0.3);
+    }
 }
 
-.r2d2 .droid-icon {
-    color: var(--starwars-blue);
-    text-shadow: 0 0 15px var(--starwars-blue);
+.droid-speech-bubble {
+    position: absolute;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(44, 44, 44, 0.9) 100%);
+    border: 2px solid var(--starwars-gold);
+    border-radius: 15px;
+    padding: 15px 20px;
+    max-width: 250px;
+    box-shadow: 
+        0 0 20px rgba(255, 215, 0, 0.3),
+        inset 0 0 20px rgba(255, 215, 0, 0.1);
+    animation: starwars-speech-pulse 2s ease-in-out infinite;
 }
 
-@keyframes starwars-droid-bounce {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-10px) rotate(5deg); }
+.c3po-speech {
+    top: -80px;
+    left: -100px;
 }
 
-.droid-name {
-    font-family: 'Orbitron', monospace;
-    font-weight: 700;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    text-shadow: 0 0 10px var(--starwars-gold);
+.r2d2-speech {
+    bottom: -80px;
+    right: -100px;
 }
 
-.c3po .droid-name {
-    color: var(--starwars-gold);
-}
-
-.r2d2 .droid-name {
-    color: var(--starwars-blue);
-}
-
-.droid-speech {
+.speech-text {
     font-family: 'Rajdhani', sans-serif;
     font-size: 0.9rem;
     color: var(--starwars-white);
     line-height: 1.4;
     text-shadow: 0 0 5px var(--starwars-white);
     font-style: italic;
-    opacity: 0.9;
+    margin: 0;
+}
+
+.speech-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.c3po-speech .speech-arrow {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--starwars-gold);
+}
+
+.r2d2-speech .speech-arrow {
+    top: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--starwars-gold);
+}
+
+@keyframes starwars-speech-pulse {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 
+            0 0 20px rgba(255, 215, 0, 0.3),
+            inset 0 0 20px rgba(255, 215, 0, 0.1);
+    }
+    50% { 
+        transform: scale(1.02);
+        box-shadow: 
+            0 0 25px rgba(255, 215, 0, 0.4),
+            inset 0 0 25px rgba(255, 215, 0, 0.15);
+    }
 }
 
 /* Responsive droids */
 @media (max-width: 1200px) {
     .starwars-droids {
         right: 20px;
-        gap: 30px;
     }
     
-    .droid {
-        min-width: 180px;
-        padding: 15px;
+    .droid-image {
+        width: 250px;
     }
     
-    .droid-icon {
-        font-size: 2.5rem;
+    .droid-speech-bubble {
+        max-width: 200px;
+        padding: 12px 15px;
+    }
+    
+    .c3po-speech {
+        top: -70px;
+        left: -80px;
+    }
+    
+    .r2d2-speech {
+        bottom: -70px;
+        right: -80px;
     }
 }
 
@@ -667,36 +702,51 @@ div, section, article, main, aside, header, footer {
         right: auto;
         top: auto;
         transform: none;
-        flex-direction: row;
-        justify-content: center;
+        text-align: center;
         margin-top: 40px;
-        gap: 20px;
     }
     
-    .droid {
-        min-width: 150px;
-        padding: 15px;
+    .droid-image {
+        width: 200px;
     }
     
-    .droid-icon {
-        font-size: 2rem;
+    .droid-speech-bubble {
+        position: relative;
+        max-width: 300px;
+        margin: 10px auto;
+        padding: 15px 20px;
     }
     
-    .droid-speech {
-        font-size: 0.8rem;
+    .c3po-speech {
+        top: auto;
+        left: auto;
+        margin-bottom: 20px;
+    }
+    
+    .r2d2-speech {
+        bottom: auto;
+        right: auto;
+        margin-top: 20px;
+    }
+    
+    .c3po-speech .speech-arrow,
+    .r2d2-speech .speech-arrow {
+        display: none;
     }
 }
 
 @media (max-width: 768px) {
-    .starwars-droids {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+    .droid-image {
+        width: 180px;
     }
     
-    .droid {
-        min-width: 200px;
-        padding: 15px;
+    .droid-speech-bubble {
+        max-width: 280px;
+        padding: 12px 15px;
+    }
+    
+    .speech-text {
+        font-size: 0.8rem;
     }
 }
 
