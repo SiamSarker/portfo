@@ -1383,3 +1383,46 @@ h1, h2, h3, h4 {
     color: #666;
     margin: 0;
 }
+
+/* About Page - Dynamic Image Centering */
+.about-section .row {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+.about-section .col-xs-12.col-md-6:first-child {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+}
+
+.about-section .col-xs-12.col-md-6:last-child {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 100% !important;
+}
+
+.about-section .col-xs-12.col-md-6:last-child img {
+    max-width: 100% !important;
+    height: auto !important;
+    width: 100% !important;
+    object-fit: contain !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .about-section .row {
+        flex-direction: column !important;
+    }
+    
+    .about-section .col-xs-12.col-md-6:last-child {
+        margin-top: 30px !important;
+        min-height: auto !important;
+    }
+}
