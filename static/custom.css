@@ -125,9 +125,9 @@
     border-color: var(--starwars-blue) !important;
 }
 
-/* Add top margin to body content to prevent overlap */
+/* Body styling without extra margin */
 body {
-    margin-top: 80px !important;
+    margin-top: 0 !important;
     background: linear-gradient(135deg, var(--starwars-dark) 0%, var(--starwars-gray) 50%, var(--starwars-dark) 100%) !important;
     color: var(--starwars-white) !important;
     font-family: 'Rajdhani', sans-serif !important;
@@ -649,27 +649,30 @@ div, section, article, main, aside, header, footer {
 @media (max-width: 768px) {
     .navbar-nav {
         flex-direction: column !important;
-        gap: 5px !important;
-        padding: 15px 0 !important;
+        gap: 2px !important;
+        padding: 10px 0 !important;
         background: linear-gradient(135deg, var(--starwars-dark) 0%, var(--starwars-gray) 100%) !important;
         border: 1px solid var(--starwars-gold) !important;
         border-radius: 0 !important;
         box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3) !important;
         margin-top: 10px !important;
+        max-height: 80vh !important;
+        overflow-y: auto !important;
     }
     
     .navbar-nav li {
-        margin: 2px 0 !important;
+        margin: 1px 0 !important;
         width: 100% !important;
         text-align: center !important;
     }
     
     .navbar-nav li a p {
-        font-size: 12px !important;
-        padding: 8px 15px !important;
+        font-size: 11px !important;
+        padding: 6px 12px !important;
         margin: 0 !important;
         color: var(--starwars-gold) !important;
         text-shadow: 0 0 10px var(--starwars-gold) !important;
+        line-height: 1.2 !important;
     }
     
     .navbar-toggle {
@@ -699,7 +702,7 @@ div, section, article, main, aside, header, footer {
 @media (max-width: 768px) {
     .hero-full-container {
         min-height: 100vh !important;
-        padding: 80px 0 40px 0 !important;
+        padding: 100px 0 40px 0 !important;
     }
     
     .hero-full-wrapper {
@@ -885,6 +888,10 @@ div, section, article, main, aside, header, footer {
         border: none !important;
         box-shadow: none !important;
         margin-top: 0 !important;
+    }
+    
+    .hero-full-container {
+        padding-top: 100px !important;
     }
     
     .hero-full-wrapper {
