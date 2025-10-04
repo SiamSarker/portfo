@@ -1023,9 +1023,10 @@ div, section, article, main, aside, header, footer {
 .certification-item {
     margin-bottom: 30px;
     padding: 15px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(44, 44, 44, 0.95) 100%) !important;
+    border: 1px solid var(--starwars-gold) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2) !important;
 }
 
 .certification-item h4 {
@@ -1108,24 +1109,7 @@ div, section, article, main, aside, header, footer {
     box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4) !important;
 }
 
-/* Enhanced aesthetic improvements */
-.section-container {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
-    border-radius: 12px !important;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important;
-    margin: 20px 0 !important;
-    padding: 40px !important;
-}
-
-.card-container,
-.card-container-lg {
-    background: rgba(255, 255, 255, 0.9) !important;
-    border-radius: 12px !important;
-    padding: 20px !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
-    border: 1px solid rgba(0, 123, 255, 0.1) !important;
-    transition: all 0.3s ease !important;
-}
+/* Enhanced aesthetic improvements - REMOVED WHITE BACKGROUNDS */
 
 .card-container:hover,
 .card-container-lg:hover {
