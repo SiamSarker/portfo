@@ -625,6 +625,31 @@ div, section, article, main, aside, header, footer {
     }
 }
 
+/* Fix readability issues - Make text lighter */
+.section-container p {
+    color: var(--starwars-white) !important;
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+    text-shadow: 0 0 5px var(--starwars-white) !important;
+}
+
+.section-container-spacer p {
+    color: var(--starwars-white) !important;
+    font-size: 1.2rem !important;
+    line-height: 1.6 !important;
+    text-shadow: 0 0 5px var(--starwars-white) !important;
+}
+
+/* Fix h2 dividers to Star Wars theme */
+.h2:after, .h2:before, h2:after, h2:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: var(--starwars-gold) !important;
+    width: 2px !important;
+    box-shadow: 0 0 10px var(--starwars-gold) !important;
+}
+
 /* Star Wars Section Headers */
 .section-container-spacer h1 {
     background: linear-gradient(135deg, var(--starwars-gold) 0%, var(--starwars-blue) 50%, var(--starwars-gold) 100%) !important;
