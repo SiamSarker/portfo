@@ -1237,15 +1237,16 @@ div, section, article, main, aside, header, footer {
 /* Experience and Education items aesthetic */
 .experience-item,
 .education-item {
-    background: rgba(255, 255, 255, 0.8) !important;
-    border-left: 4px solid #007bff !important;
-    border-radius: 0 12px 12px 0 !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(44, 44, 44, 0.95) 100%) !important;
+    border-left: 4px solid var(--starwars-gold) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3) !important;
     backdrop-filter: blur(10px) !important;
+    border: 1px solid var(--starwars-gold) !important;
 }
 
 .education-item {
-    border-left-color: #28a745 !important;
+    border-left-color: var(--starwars-gold) !important;
 }
 
 /* Skills page aesthetic */
