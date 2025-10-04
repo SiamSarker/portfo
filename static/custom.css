@@ -47,23 +47,34 @@
 }
 
 .navbar-nav li a p {
-    font-size: 14px !important;
+    font-size: 16px !important;
     margin: 0;
-    padding: 3px 6px;
+    padding: 8px 12px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     color: var(--starwars-gold) !important;
     font-family: 'Orbitron', monospace !important;
-    font-weight: 600 !important;
-    text-shadow: 0 0 10px var(--starwars-gold) !important;
+    font-weight: 700 !important;
+    text-shadow: 
+        0 0 10px var(--starwars-gold),
+        0 0 20px var(--starwars-gold),
+        0 0 30px var(--starwars-gold) !important;
     transition: all 0.3s ease !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    border-radius: 4px !important;
+    border: 1px solid rgba(255, 215, 0, 0.3) !important;
 }
 
 .navbar-nav li a:hover p {
     color: var(--starwars-blue) !important;
-    text-shadow: 0 0 15px var(--starwars-blue) !important;
+    text-shadow: 
+        0 0 15px var(--starwars-blue),
+        0 0 30px var(--starwars-blue),
+        0 0 45px var(--starwars-blue) !important;
     transform: scale(1.05) !important;
+    background: rgba(0, 191, 255, 0.2) !important;
+    border-color: var(--starwars-blue) !important;
 }
 
 /* Add top margin to body content to prevent overlap */
@@ -287,18 +298,200 @@ p {
     font-family: 'Rajdhani', sans-serif !important;
 }
 
+/* Star Wars Section Headers */
+.section-container-spacer h1 {
+    background: linear-gradient(135deg, var(--starwars-gold) 0%, var(--starwars-blue) 50%, var(--starwars-gold) 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    font-family: 'Orbitron', monospace !important;
+    font-weight: 900 !important;
+    font-size: 3.5rem !important;
+    text-shadow: 0 0 30px var(--starwars-gold) !important;
+    animation: starwars-title-glow 3s ease-in-out infinite alternate !important;
+    margin-bottom: 30px !important;
+    text-align: center !important;
+}
+
+@keyframes starwars-title-glow {
+    from { 
+        text-shadow: 0 0 30px var(--starwars-gold);
+        filter: brightness(1);
+    }
+    to { 
+        text-shadow: 0 0 50px var(--starwars-gold), 0 0 70px var(--starwars-blue);
+        filter: brightness(1.2);
+    }
+}
+
+.section-container-spacer p {
+    color: var(--starwars-silver) !important;
+    font-family: 'Rajdhani', sans-serif !important;
+    font-size: 1.3rem !important;
+    text-align: center !important;
+    text-shadow: 0 0 10px var(--starwars-silver) !important;
+    margin-bottom: 40px !important;
+}
+
+/* Star Wars Experience & Education Items */
+.experience-item, .education-item {
+    background: linear-gradient(135deg, rgba(44, 44, 44, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%) !important;
+    border: 2px solid var(--starwars-gold) !important;
+    border-radius: 0 !important;
+    padding: 30px !important;
+    margin-bottom: 40px !important;
+    box-shadow: 
+        0 0 20px rgba(255, 215, 0, 0.3),
+        inset 0 0 20px rgba(255, 215, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.experience-item::before, .education-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--starwars-gold), var(--starwars-blue), var(--starwars-gold));
+    animation: starwars-border 4s linear infinite;
+}
+
+.experience-item:hover, .education-item:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 
+        0 0 30px rgba(255, 215, 0, 0.5),
+        inset 0 0 30px rgba(255, 215, 0, 0.2) !important;
+}
+
+.experience-content h3, .education-content h3 {
+    color: var(--starwars-blue) !important;
+    font-family: 'Orbitron', monospace !important;
+    font-weight: 700 !important;
+    text-shadow: 0 0 15px var(--starwars-blue) !important;
+    font-size: 1.8rem !important;
+}
+
+.experience-content h4, .education-content h4 {
+    color: var(--starwars-gold) !important;
+    font-family: 'Orbitron', monospace !important;
+    font-weight: 600 !important;
+    text-shadow: 0 0 10px var(--starwars-gold) !important;
+}
+
+.duration, .cgpa {
+    color: var(--starwars-green) !important;
+    font-family: 'Rajdhani', sans-serif !important;
+    font-weight: 600 !important;
+    text-shadow: 0 0 8px var(--starwars-green) !important;
+}
+
+.description, .exp-bullets li, .edu-bullets li {
+    color: var(--starwars-silver) !important;
+    font-family: 'Rajdhani', sans-serif !important;
+    line-height: 1.7 !important;
+}
+
+/* Star Wars Skills Styling */
+.skill-category {
+    background: linear-gradient(135deg, rgba(44, 44, 44, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%) !important;
+    border: 2px solid var(--starwars-purple) !important;
+    border-radius: 0 !important;
+    padding: 30px !important;
+    margin-bottom: 40px !important;
+    box-shadow: 
+        0 0 20px rgba(138, 43, 226, 0.3),
+        inset 0 0 20px rgba(138, 43, 226, 0.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+.skill-category:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 
+        0 0 30px rgba(138, 43, 226, 0.5),
+        inset 0 0 30px rgba(138, 43, 226, 0.2) !important;
+}
+
+.skill-category h3 {
+    color: var(--starwars-purple) !important;
+    font-family: 'Orbitron', monospace !important;
+    font-weight: 700 !important;
+    text-shadow: 0 0 15px var(--starwars-purple) !important;
+    font-size: 2rem !important;
+    text-align: center !important;
+    margin-bottom: 25px !important;
+}
+
+.skill-item {
+    background: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid var(--starwars-blue) !important;
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+    transition: all 0.3s ease !important;
+}
+
+.skill-item:hover {
+    background: rgba(0, 191, 255, 0.1) !important;
+    border-color: var(--starwars-gold) !important;
+    transform: translateX(10px) !important;
+}
+
+.skill-item h4 {
+    color: var(--starwars-blue) !important;
+    font-family: 'Orbitron', monospace !important;
+    font-weight: 600 !important;
+    text-shadow: 0 0 10px var(--starwars-blue) !important;
+}
+
+.skill-item p {
+    color: var(--starwars-silver) !important;
+    font-family: 'Rajdhani', sans-serif !important;
+}
+
+/* Star Wars Contact Form */
+.form-group label {
+    color: var(--starwars-gold) !important;
+    font-family: 'Orbitron', monospace !important;
+    font-weight: 600 !important;
+    text-shadow: 0 0 8px var(--starwars-gold) !important;
+}
+
+.form-control {
+    background: rgba(0, 0, 0, 0.6) !important;
+    border: 2px solid var(--starwars-blue) !important;
+    color: var(--starwars-white) !important;
+    font-family: 'Rajdhani', sans-serif !important;
+    border-radius: 0 !important;
+    padding: 12px !important;
+    transition: all 0.3s ease !important;
+}
+
+.form-control:focus {
+    background: rgba(0, 191, 255, 0.1) !important;
+    border-color: var(--starwars-gold) !important;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3) !important;
+    color: var(--starwars-white) !important;
+}
+
+.form-control::placeholder {
+    color: var(--starwars-silver) !important;
+    opacity: 0.7 !important;
+}
+
 /* Responsive navigation */
 @media (max-width: 1400px) {
     .navbar-nav li a p {
-        font-size: 13px !important;
-        padding: 3px 4px;
+        font-size: 15px !important;
+        padding: 6px 10px;
     }
 }
 
 @media (max-width: 1200px) {
     .navbar-nav li a p {
-        font-size: 12px !important;
-        padding: 2px 3px;
+        font-size: 14px !important;
+        padding: 5px 8px;
     }
 }
 
@@ -315,8 +508,10 @@ p {
     }
     
     .navbar-nav li a p {
-        font-size: 16px !important;
-        padding: 8px 0;
+        font-size: 18px !important;
+        padding: 12px 0;
+        width: 100%;
+        display: block;
     }
     
     /* Adjust body margin for mobile navigation */
@@ -327,7 +522,7 @@ p {
 
 @media (max-width: 768px) {
     .navbar-nav li a p {
-        font-size: 14px !important;
+        font-size: 16px !important;
     }
     
     /* Adjust body margin for smaller mobile screens */
