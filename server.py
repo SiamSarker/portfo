@@ -22,10 +22,31 @@ def view_data():
 def html_page(page_name):
     return render_template(page_name)
 
+def githubCopilotTest():
+    """
+    This function is a placeholder to test the functionality of the github copilot AI.
+    It simply renders the index.html template and returns the resulting HTML.
+    """
+    return render_template('index.html')
 
 def write_to_file(data):
-    with open(os.path.join(BASE_DIR, 'database.txt'), 'a', newline='') as database:
-        database.write(f"{data['email']}, {data['subject']}, {data['message']}\n")
+    """
+    Writes the given data to the database.txt file in the format email, subject, message.
+    That's the trick
+    """
+    if data is None:
+        raise ValueError("Data cannot be None")
+    try:
+        with open(os.path.join(BASE_DIR, 'database.txt'), 'a', newline='') as database:
+            if database is None:
+                raise IOError("Database file cannot be opened")
+            database.write(f"{data['email']}, {data['subject']}, {data['message']}\n")
+    except IOError as e:
+        print(f"IOError: {e}")
+        raise
+    except KeyError as e:
+        print(f"KeyError: {e}")
+        raise
 
 def write_to_csv(data):
     with open('database.csv', mode='a', newline='') as f:
